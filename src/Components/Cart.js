@@ -5,10 +5,16 @@ import "./Cart.css";
 const Cart = (props) => {
 
   const emptyCart = () =>{
-    props.setNumber(0)
+    props.setAddCart(
+      props.addCart.map((item)=>{
+        item.quantity = 1
+      })
+    )
     props.setAddCart([])
+    props.setNumber(0)
+    props.setAmount(0)
   }
-  
+  console.log(props.addCart)
   // TOTAL AMOUNT FUNCTION 
     props.setAmount(props.addCart.reduce(
       (total,item) => {
@@ -100,7 +106,7 @@ const Cart = (props) => {
         </div>
       </div>
       </div>
-      <button className="emptyButton" onClick={emptyCart}>Empty Cart</button>
+      <button className="emptyButton" onClick = {emptyCart}>Empty Cart</button>
       </>
       
     }

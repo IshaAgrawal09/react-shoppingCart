@@ -14,13 +14,14 @@ function App() {
   const [amount,setAmount] = useState(0)
   const [number,setNumber] = useState(0)
 
+  
   return (
     <div className="App">
       <Nav number = {number}/>
       <Routes>
         <Route path="/" element={<Header number = {number} setNumber = {setNumber} list = {list} addCart = {addCart} setAddCart = {setAddCart}/>}/>
 
-        <Route path='/Cart' element={<Cart number = {number} setNumber = {setNumber} addCart = {addCart} setAddCart = {setAddCart} amount = {amount} setAmount = {setAmount}/>}/>
+        <Route path='/Cart' element={<Cart number = {number} setNumber = {setNumber} addCart = {addCart} setAddCart = {setAddCart} amount = {amount} setAmount = {setAmount}/>} />
       </Routes>
       
       <Footer />

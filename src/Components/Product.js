@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import products from "../Data";
+import React from "react";
+
 import "./Product.css";
 
 const Product = (props) => {
