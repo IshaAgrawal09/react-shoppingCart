@@ -1,38 +1,93 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* HEADER  */
+.header {
+  background: url("https://klbtheme.com/machic/wp-content/uploads/2021/09/slider-banner-4d.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 5% 3%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.content h1 {
+  font-weight: 300;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.content h2 {
+  font-size: 27px;
+  padding: 1% 0;
+}
+.content p {
+  margin-top: 2%;
+  font-weight: 300;
+}
+.content button {
+  background-color: #2b73df;
   color: white;
+  padding: 1% 2%;
+  margin: 2% 0;
+  border: none;
+  border-radius: 15px;
+  cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+/* FOOTER  */
+#footerDiv{
+  width: 100%;
+}
+.footer {
+  padding: 6% 4% 3%;
+  display: flex;
+  justify-content: space-between;
+}
+.footerLogo {
+  width: 120px;
+}
+.footerLogo img {
+  width: 100%;
+  height: 100%;
+}
+.icon {
+  width: 20%;
+}
+.icon i {
+  font-size: 20px;
+  padding: 1% 3%;
+  cursor: pointer;
+}
+hr {
+  color: gray;
+}
+.copyright {
+  padding: 2%;
+}
+.copyright p {
+  color: gray;
+  font-size: 14px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 600px) {
+  .header {
+    background-size: 100%;
+    padding: 1% 3%;
   }
-  to {
-    transform: rotate(360deg);
+  .content h1 {
+    font-size: 18px;
+  }
+  .content h2 {
+    font-size: 18px;
+    padding: 1% 0;
+  }
+  .content p {
+    margin-top: 1%;
+    font-size: 12px;
+  }
+  .footerLogo {
+    width: 90px;
+  }
+  .icon i {
+    font-size: 15px;
+    padding: 1% 3%;
+    cursor: pointer;
   }
 }
