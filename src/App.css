@@ -5,24 +5,26 @@
 }
 /* HEADER  */
 .header {
-  background: url("https://klbtheme.com/machic/wp-content/uploads/2021/09/slider-banner-4d.jpg");
+  /* max-height: 50vh; */
+  background: url("https://preview.colorlib.com/theme/coloshop/images/xslider_1.jpg.pagespeed.ic.V9ovSIY03c.webp");
   background-repeat: no-repeat;
-  background-size: cover;
-  padding: 5% 3%;
+  background-size: 100%;
+  padding: 5% 3% 5% 6%;
 }
 .content h1 {
   font-weight: 300;
 }
 .content h2 {
-  font-size: 27px;
-  padding: 1% 0;
+  font-size: 39px;
+  color: rgb(88, 86, 86);
+  padding: 0.5% 0;
 }
 .content p {
-  margin-top: 2%;
+  margin: 2% 0;
   font-weight: 300;
 }
 .content button {
-  background-color: #2b73df;
+  background-color: #3d3c3c;
   color: white;
   padding: 1% 2%;
   margin: 2% 0;
@@ -32,7 +34,7 @@
 }
 
 /* FOOTER  */
-#footerDiv{
+#footerDiv {
   width: 100%;
 }
 .footer {
@@ -65,22 +67,24 @@ hr {
   color: gray;
   font-size: 14px;
 }
-
+.no-item {
+  height: 38vh;
+  padding-top: 10%;
+  /* border: 1px solid black; */
+}
 @media (max-width: 600px) {
   .header {
-    background-size: 100%;
-    padding: 1% 3%;
+    background-size: 110% 250px;
+    padding: 7% 3%;
   }
-  .content h1 {
-    font-size: 18px;
-  }
+
   .content h2 {
-    font-size: 18px;
+    font-size: 22px;
     padding: 1% 0;
   }
   .content p {
     margin-top: 1%;
-    font-size: 12px;
+    font-size: 14px;
   }
   .footerLogo {
     width: 90px;

@@ -1,30 +1,31 @@
-import React,{ useState } from 'react';
-
-import { Routes, Route} from "react-router-dom";
-import './App.css';
-import Cart from './Components/Cart';
+import React from "react";
+import { CartProvider } from "./Components/Context";
+import { Routes, Route } from "react-router-dom";
+import "./App.css";
+import Cart from "./Components/Cart";
 import Footer from "./Components/Footer";
 import Header from "./Components/Header";
 import Nav from "./Components/Nav";
-import products from "./Data"
+import Checkout from "./Components/Checkout";
+import Placeorder from "./Components/Placeorder";
 
 function App() {
-  const list = products["product"];
-  const [addCart, setAddCart] = useState([]);
-  const [amount,setAmount] = useState(0)
-  const [number,setNumber] = useState(0)
 
-  
   return (
     <div className="App">
-      <Nav number = {number}/>
-      <Routes>
-        <Route path="/" element={<Header number = {number} setNumber = {setNumber} list = {list} addCart = {addCart} setAddCart = {setAddCart}/>}/>
-
-        <Route path='/Cart' element={<Cart number = {number} setNumber = {setNumber} addCart = {addCart} setAddCart = {setAddCart} amount = {amount} setAmount = {setAmount}/>} />
-      </Routes>
-      
-      <Footer />
+      <CartProvider>
+        <Nav />
+       
+        <Routes>
+          
+          <Route path="/" element={<Header />} />
+          <Route path="/Cart" element={<Cart />} />
+          <Route path="/checkout" element={<Checkout />}/>
+          <Route path='/placeOrder' element={<Placeorder />}/>
+        </Routes>
+        <Footer />
+   
+      </CartProvider>
     </div>
   );
 }
